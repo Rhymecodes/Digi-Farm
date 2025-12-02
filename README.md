@@ -7,7 +7,7 @@ Digi-Farm is a website where farmers can go to get helpful information and advic
 
 ### The Problem It Solves
 
-```
+
 Many small-scale farmers in Kenya face challenges like:
 
 Not knowing when to plant - Should I plant now or wait for rain?
@@ -21,7 +21,7 @@ __Digi-Farm__ fixes these problems by giving farmers access to:
 * Guidance on when to plant, weed, and harvest
 * Information about common pests and how to treat them
 * Tips and advice from other farmers in their community
-```
+
 
 ### How Digi-Farm Works
 

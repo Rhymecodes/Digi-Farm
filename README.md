@@ -2,9 +2,8 @@
 
 ### What is Digi-Farm?
 
-```
 Digi-Farm is a website where farmers can go to get helpful information and advice about farming. Instead of farmers having to guess or rely only on what they learned from their parents, they can use Digi-Farm to make smarter decisions about their crops.
-```
+
 
 ### The Problem It Solves
 

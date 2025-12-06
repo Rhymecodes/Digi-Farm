@@ -23,8 +23,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('agriapp.urls')),
+    path('planner/', include('weather_calendar.urls')),
+    path('plants/', include('pests.urls')),
+    path('tips/', include('tips.urls')),
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

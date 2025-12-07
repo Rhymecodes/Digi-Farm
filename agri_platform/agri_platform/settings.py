@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "agriapp",
-    "weather_calendar",
+    "planner",
     "pests",
     "tips",
     "consultations",

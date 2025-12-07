@@ -130,18 +130,18 @@ def simple_pest_detection(image_path):
 
 
 @login_required(login_url='login')
-def pest_diagnosis(request):
+def pest_diagnostics(request):
     """AI Pest diagnosis view"""
     if request.method == 'POST':
         if 'image' not in request.FILES:
             messages.error(request, 'Please upload an image')
-            return redirect('pest_diagnosis')
+            return redirect('pest_diagnostics')
         
         image_file = request.FILES['image']
         
         if image_file.size > 5 * 1024 * 1024:
             messages.error(request, 'Image size must be less than 5MB')
-            return redirect('pest_diagnosis')
+            return redirect('pest_diagnostics')
         
         try:
             import tempfile
@@ -167,10 +167,10 @@ def pest_diagnosis(request):
                 'diagnosis_done': True
             }
             
-            return render(request, 'pests/pest_diagnosis.html', context)
+            return render(request, 'pests/pest_diagnostics.html', context)
         
         except Exception as e:
             messages.error(request, f'Error analyzing image: {str(e)}')
-            return redirect('pest_diagnosis')
+            return redirect('pest_diagnostics')
     
-    return render(request, 'pests/pest_diagnosis.html', {'diagnosis_done': False})
+    return render(request, 'pests/pest_diagnostics.html', {'diagnosis_done': False})

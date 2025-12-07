@@ -12,23 +12,22 @@
     </a>
 </div>
 <div> 
-    <form action="" method = "POST">
+    <form action="" method="POST">
 
         {% csrf_token %}
         <div class="mb-3">
-            <label for="InputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder = 'example@gmail.com'>
-            
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required>
         </div>
         <div class="mb-3">
-            <label for="InputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="InputPassword1">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
         </div>
         <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
             <label class="form-check-label" for="exampleCheck1">I agree to the <a href="{% url 'terms and conditions' %}">terms and conditions</a> of agriapp</label>
         </div>
-        <button type="submit" class="btn btn-primary" style = 'background: #16a34a'>LOGIN</button>
+        <button type="submit" class="btn btn-primary" style='background: #16a34a'>LOGIN</button>
     </form>
 </div>
 

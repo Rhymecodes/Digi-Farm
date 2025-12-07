@@ -26,29 +26,24 @@ def home (request):
     return render(request, 'home.html', context)
 
 #Login User
-def login(request):
+def user_login(request):
     if request.method == 'POST':
-        username = request.POST.get('username').lower()
+        username = request.POST.get('username')
         password = request.POST.get('password')
-
-        try:
-            user = User.objects.get(username = f'_{username}')
-        except:
-            print('User not found!')
 
         user = authenticate(request, username=username, password=password)
 
         if user is not None: 
-             login(request, user)
-             return redirect('home')
+            login(request, user)
+            return redirect('home')
         else:
             messages.error(request, 'Wrong username or Password!')
-    context = {}
+    
     return render(request, 'auth/login.html')
 
 
 # Logout User
-def logout(request):
+def user_logout(request):
     context ={}
     logout(request)
     messages.success(request, 'You have been logged out.')
